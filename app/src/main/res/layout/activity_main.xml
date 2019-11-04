@@ -4,34 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#CEC75F"
+    >
 
 
     <TextView
         android:id="@+id/current"
-        android:layout_width="361dp"
-        android:layout_height="91dp"
+        android:layout_width="fill_parent"
+        android:layout_height="122dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:textColor="@color/colorPrimaryDark"
-        android:hint="Your Location"
-        android:inputType="textPersonName"
+        android:background="@drawable/rect2"
+        android:inputType="textMultiLine"
+        android:textColor="#0A0505"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="354dp"
-        android:layout_height="40dp"
+        android:layout_width="333dp"
+        android:layout_height="67dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/rect2"
         android:ems="10"
+        android:hint="رايح فين"
         android:inputType="textPersonName"
-        android:text="Enter Friend Location"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/current" />
@@ -40,39 +42,61 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="48dp"
+        android:background="@drawable/rect3"
         android:onClick="Calculate"
         android:text="Calc KM"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        android:visibility="gone"
+        />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="202dp"
-        android:layout_height="73dp"
+        android:layout_width="231dp"
+        android:layout_height="96dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/rect2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.819"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="60dp"
-        android:text="CALC LE"
-        android:enabled="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rect3"
+        android:gravity="center"
         android:onClick="calc"
+        android:text="احسبلى"
+        android:textSize="15dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
+    <ProgressBar
+        android:id="@+id/progbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
